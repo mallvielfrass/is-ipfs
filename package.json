@@ -1,6 +1,6 @@
 {
   "name": "@vikiival/is-ipfs",
-  "version": "7.0.4-rc.0",
+  "version": "7.0.4-rc.4",
   "description": "Rude fork of is-ipfs",
   "author": "Francisco Dias <francisco@baiodias.com> (http://franciscodias.net/)",
   "license": "Apache-2.0 OR MIT",
@@ -28,10 +28,7 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "files": [
-    "src",
-    "dist/src",
-    "!dist/test",
-    "!**/*.tsbuildinfo"
+    "dist"
   ],
   "exports": {
     ".": {
@@ -151,11 +148,11 @@
     "@multiformats/multiaddr": "^11.0.0",
     "iso-url": "^1.1.3",
     "multiformats": "^10.0.1",
-    "uint8arrays": "^4.0.2",
-    "unbuild": "^0.9.4"
+    "uint8arrays": "^4.0.2"
   },
   "devDependencies": {
-    "aegir": "^37.5.3"
+    "aegir": "^37.5.3",
+    "unbuild": "^0.9.4"
   },
   "browser": {
     "fs": false
