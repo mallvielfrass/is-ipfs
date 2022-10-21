@@ -1,7 +1,7 @@
 {
-  "name": "is-ipfs",
-  "version": "7.0.3",
-  "description": "A set of utilities to help identify IPFS resources on the web",
+  "name": "@vikiival/is-ipfs",
+  "version": "7.0.4-rc.0",
+  "description": "Rude fork of is-ipfs",
   "author": "Francisco Dias <francisco@baiodias.com> (http://franciscodias.net/)",
   "license": "Apache-2.0 OR MIT",
   "homepage": "https://github.com/ipfs-shipyard/is-ipfs#readme",
@@ -24,7 +24,9 @@
     "npm": ">=7.0.0"
   },
   "type": "module",
-  "types": "./dist/src/index.d.ts",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "files": [
     "src",
     "dist/src",
@@ -33,8 +35,9 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
-      "import": "./dist/src/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
   "eslintConfig": {
@@ -133,7 +136,7 @@
     "lint": "aegir lint",
     "dep-check": "aegir dep-check",
     "generate": "protons src/pb/peer.proto src/pb/tags.proto",
-    "build": "aegir build",
+    "build": "unbuild",
     "test": "aegir test",
     "test:chrome": "aegir test -t browser",
     "test:chrome-webworker": "aegir test -t webworker",
@@ -148,7 +151,8 @@
     "@multiformats/multiaddr": "^11.0.0",
     "iso-url": "^1.1.3",
     "multiformats": "^10.0.1",
-    "uint8arrays": "^4.0.2"
+    "uint8arrays": "^4.0.2",
+    "unbuild": "^0.9.4"
   },
   "devDependencies": {
     "aegir": "^37.5.3"
