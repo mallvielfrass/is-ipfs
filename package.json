@@ -29,12 +29,6 @@
 	"files": [
 		"dist"
 	],
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js"
-		}
-	},
 	"eslintConfig": {
 		"extends": "ipfs",
 		"parserOptions": {
